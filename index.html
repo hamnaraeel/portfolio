@@ -269,6 +269,16 @@
       repeating-linear-gradient(90deg, rgba(255,255,255,.045) 0 1px, transparent 1px 22px),
       var(--bg-elevated);
   }
+  .visual-photo{height:194px}
+  .visual-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+  .visual-photo .vis-label{
+    background:rgba(10,14,22,.72);padding:4px 9px;border-radius:5px;
+    backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  }
+  .demo-note{
+    font-family:var(--font-mono);font-size:11.5px;color:var(--text-muted);
+    margin-top:8px;
+  }
   .visual-net svg{width:100%;height:100%;display:block}
   .token-grid{display:grid;grid-template-columns:repeat(14,1fr);gap:4px;padding:18px 14px 14px;height:100%;align-content:center}
   .token-grid span{aspect-ratio:1;border-radius:3px;background:var(--border-soft)}
@@ -613,8 +623,9 @@
 
         <!-- Project 1 -->
         <div class="project-card">
-          <div class="project-visual visual-seg">
-            <span class="vis-label">Segmentation Mask</span>
+          <div class="project-visual visual-photo">
+            <span class="vis-label">Actual model output</span>
+            <img src="assets/hscr-demo.jpg" alt="HSCR classifier live results: diseased case at 95.1% confidence with 6 segmented ganglion cells, versus a non-diseased case at 8.3% confidence with 3 segments" loading="lazy" width="2430" height="680">
           </div>
           <div class="project-top">
             <div class="project-icon">
@@ -636,6 +647,7 @@
             Try live inference on Hugging Face
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M8 7h9v9"/></svg>
           </a>
+          <p class="demo-note">Screenshots above show real output — live Space may take ~30s to wake from idle.</p>
         </div>
 
         <!-- Project 2 -->
@@ -684,6 +696,7 @@
             Try live inference on Hugging Face
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M8 7h9v9"/></svg>
           </a>
+          <p class="demo-note">Live Space may take ~30s to wake from idle.</p>
         </div>
 
         <!-- Project 3 -->
